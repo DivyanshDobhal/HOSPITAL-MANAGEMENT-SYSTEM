@@ -1,0 +1,131 @@
+.messages-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.messages-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
+
+.messages-list {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 20px;
+  max-height: 600px;
+  overflow-y: auto;
+  border: 1px solid var(--border-color);
+}
+
+.message-item {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  border-bottom: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.message-item:hover {
+  background: var(--hover-bg);
+}
+
+.message-item.unread {
+  background: var(--unread-bg);
+  font-weight: 500;
+}
+
+.message-icon {
+  font-size: 20px;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+}
+
+.message-content {
+  flex: 1;
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.message-sender {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.message-time {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.message-subject {
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: var(--text-color);
+}
+
+.message-preview {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.message-detail {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 25px;
+  border: 1px solid var(--border-color);
+}
+
+.message-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.message-detail-header h2 {
+  margin: 0;
+  color: var(--text-color);
+}
+
+.message-meta {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: var(--bg-color);
+  border-radius: 8px;
+}
+
+.message-meta p {
+  margin: 5px 0;
+  color: var(--text-color);
+}
+
+.message-body {
+  line-height: 1.6;
+  color: var(--text-color);
+  white-space: pre-wrap;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .messages-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

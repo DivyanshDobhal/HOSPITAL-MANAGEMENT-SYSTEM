@@ -1,0 +1,131 @@
+.file-upload-container {
+  width: 100%;
+}
+
+.file-upload-dropzone {
+  border: 2px dashed var(--border-color);
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  background: var(--card-bg);
+}
+
+.file-upload-dropzone:hover {
+  border-color: var(--primary-color);
+  background: var(--hover-bg);
+}
+
+.file-upload-dropzone.dragging {
+  border-color: var(--primary-color);
+  background: var(--primary-light);
+  transform: scale(1.02);
+}
+
+.upload-icon {
+  font-size: 48px;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.upload-text {
+  font-size: 16px;
+  color: var(--text-color);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.upload-hint {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.file-list {
+  margin-top: 20px;
+  padding: 20px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.file-list h4 {
+  margin: 0 0 15px 0;
+  color: var(--text-color);
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: var(--bg-color);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: background-color 0.2s;
+}
+
+.file-item:hover {
+  background: var(--hover-bg);
+}
+
+.file-icon {
+  color: var(--primary-color);
+  font-size: 20px;
+}
+
+.file-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.file-name {
+  font-size: 14px;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.file-size {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.file-remove {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.file-remove:hover {
+  background: var(--hover-bg);
+  color: #dc3545;
+}
+
+.upload-btn {
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.spinning {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+

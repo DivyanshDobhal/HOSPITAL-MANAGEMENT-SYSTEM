@@ -1,0 +1,145 @@
+.navbar {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  padding: 15px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-link {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  position: relative;
+}
+
+.navbar-link:hover {
+  background-color: var(--hover-bg);
+  color: var(--primary-color);
+}
+
+.navbar-link.active {
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.navbar-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 2px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 18px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
+  background-color: var(--hover-bg);
+}
+
+.navbar-user {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-left: 15px;
+  border-left: 1px solid var(--border-color);
+}
+
+.navbar-user span {
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-wrap: wrap;
+  }
+
+  .navbar-menu {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .navbar-link {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .navbar-user {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid var(--border-color);
+    padding-top: 10px;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
